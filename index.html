@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase | Premium Online Shopping</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-store"></i> AuraCart
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item category-filter" data-category="all">All Categories</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item category-filter" data-category="men's clothing">Men's Clothing</a></li>
+                            <li><a class="dropdown-item category-filter" data-category="women's clothing">Women's Clothing</a></li>
+                            <li><a class="dropdown-item category-filter" data-category="jewelery">Jewelery</a></li>
+                            <li><a class="dropdown-item category-filter" data-category="electronics">Electronics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="dealsLink">Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="newArrivalsLink">New Arrivals</a>
+                    </li>
+                </ul>
+                
+                <div class="search-container">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search products...">
+                    <button class="btn" id="searchButton">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+                
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item position-relative">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="cart-badge" id="cartCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-person fs-5"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <div id="heroSlider" class="carousel slide hero-slider" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1564406860401-1a35364fb9b9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHN1bW1lciUyMHNhbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=800');">
+                <div class="carousel-caption text-start">
+                    <h2>Summer Collection 2025</h2>
+                    <p>Discover the latest trends with up to 50% off on selected items.</p>
+                    <a href="#products" class="btn btn-hero">Shop Now</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                <div class="carousel-caption text-start">
+                    <h2>Electronics Sale</h2>
+                    <p>Get the latest gadgets and electronics with exclusive discounts.</p>
+                    <a href="#products" class="btn btn-hero">Explore Deals</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                <div class="carousel-caption text-start">
+                    <h2>New Arrivals</h2>
+                    <p>Check out our newest products with special introductory prices.</p>
+                    <a href="#products" class="btn btn-hero">View New Items</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Features Section -->
+    <section class="container mb-5">
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h5>Free Shipping</h5>
+                    <p class="text-muted">Free delivery on orders over $50</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <h5>Easy Returns</h5>
+                    <p class="text-muted">30-days easy return <br> policy</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h5>Secure Payment</h5>
+                    <p class="text-muted">100% secure payment processing</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h5>24/7 Support</h5>
+                    <p class="text-muted">Round-the-clock customer service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mb-5">
+        <h2 class="section-title">Featured Products</h2>
+        
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="mb-3">Filter Products</h5>
+                    <div class="d-flex align-items-center">
+                        <span class="me-2">Price:</span>
+                        <span id="priceValue" class="fw-bold">$0 - $1000</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <input type="range" class="range-slider" id="priceRange" min="0" max="1000" step="10" value="1000">
+                </div>
+                <div class="col-md-2">
+                    <select class="form-select" id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="men's clothing">Men's Clothing</option>
+                        <option value="women's clothing">Women's Clothing</option>
+                        <option value="jewelery">Jewelery</option>
+                        <option value="electronics">Electronics</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading-spinner" id="loadingSpinner"></div>
+
+        <!-- Products Grid -->
+        <div class="row g-4" id="products">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 class="mb-3">
+                        <i class="fas fa-store me-2"></i> AuraCart
+                    </h4>
+                    <p>Your one-stop destination for premium online shopping. We bring you the best products at the best prices with exceptional customer service.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="mb-3">Customer Service</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Shipping Policy</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Returns & Refunds</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Newsletter</h5>
+                    <p>Subscribe to get special offers and updates</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2025 AuraCart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification">
+        <div class="toast-icon toast-success">
+            <i class="bi bi-check-lg"></i>
+        </div>
+        <div>
+            <h6 class="mb-0" id="toastTitle">Product Added</h6>
+            <p class="mb-0 text-muted" id="toastMessage">Item has been added to your cart</p>
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProductTitle">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="modalProductImage" src="" class="img-fluid rounded" alt="Product Image">
+                        </div>
+                        <div class="col-md-6">
+                            <h4 id="modalProductName" class="mb-2"></h4>
+                            <span class="product-category mb-3 d-inline-block" id="modalProductCategory"></span>
+                            <div class="rating mb-2" id="modalProductRating"></div>
+                            <p class="price-tag fs-3 mb-3" id="modalProductPrice"></p>
+                            <p id="modalProductDescription" class="mb-4"></p>
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-lg" id="modalAddToCart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>
